@@ -21,10 +21,6 @@ app.use(express.urlencoded({ limit: "40kb", extended: true }));
 
 app.use("/api/v1/users", userRoutes);
 
-app.get("/", (req, res) => {
-    return res.send({'hello': 'world'})
-})
-
 const start = async () => {
     app.set("mongo_user")
     const connectionDb = await mongoose.connect("mongodb+srv://vikashsathe83:vbSA8Iaa5S2I4ITn@cluster0.qll05tb.mongodb.net/")
