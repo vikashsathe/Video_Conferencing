@@ -16,7 +16,7 @@ export default function LandingPage() {
                 </div>
                 <div className='navlist flex justify-center items-center gap-8' style={{cursor:"pointer"}}>
                     <p className='' onClick={() => {
-                        router("/aljk23")
+                        router("/aljk2399")
                     }}>Join as Guest</p>
                       <div onClick={() => {
                         router("/auth")
