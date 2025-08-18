@@ -32,19 +32,20 @@ export default function LandingPage() {
                 </div>
             </nav>
             <div className="landingMainContainer row flex justify-center mt-20 items-center px-[3rem]">
-                <div className='w-3/6'>
+             
+                <div className='w-2/6 flex justify-center'>
+
+                    <img className='rounded-3' src={LandingPageImg} alt="" style={{height:"500px"}} />
+                    
+
+                </div>
+                   <div className='w-3/6'>
                     <h1 className='text-start leading-[1.1]' style={{fontSize:"5.2rem"}}><span style={{ color: "#FF9839" }}>Spend</span> Your Time With <span style={{color:"#FF2C2C"}}> Loved</span> Ones</h1>
 
                     <p className='text-xl px-4 py-3 text-start' style={{color:"#6b6666ff"}}>Cover a distance by FaceLink Video Call</p>
                     <div role='button' className='px-25 py-3 mt-5 rounded-xl' style={{background:"#D97500", width:"fit-content"}}>
                         <Link to={"/auth"} className='text-decoration-none text-white text-xl'>Get Started</Link>
                     </div>
-                </div>
-                <div className='w-2/6 flex justify-end'>
-
-                    <img className='rounded-3' src={LandingPageImg} alt="" style={{height:"500px"}} />
-                    
-
                 </div>
             </div>
         </div>

@@ -33,59 +33,47 @@ export default function History() {
         fetchHistory();
     }, [])
 
-    // let formatDate = (dateString) => {
-
-    //     const date = new Date(dateString);
-    //     const day = date.getDate().toString().padStart(2, "0");
-    //     const month = (date.getMonth() + 1).toString().padStart(2, "0")
-    //     const year = date.getFullYear();
-
-    //     return `${day}/${month}/${year}`
-
-    // }
-
     let formatDate = dateString =>
   new Date(dateString).toLocaleDateString("en-GB");
 
 
     return (
-        <div>
+        <div className='w-full h-screen px-10 py-5'>
 
             <IconButton onClick={() => {
                 routeTo("/home")
             }}>
-                <HomeIcon />
+                <HomeIcon sx={{color:"#d4d4d8", fontSize:"2rem"}} />
             </IconButton >
-            {
-                (meetings.length !== 0) ? meetings.map((e, i) => {
-                    return (
+            
+                <div className='flex flex-wrap gap-3 py-10 items-center justify-center'>
 
-                        <>
-
-
-                            <Card key={i} variant="outlined">
-
-
-                                <CardContent>
-                                    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                                        Code: {e.meetingCode}
-                                    </Typography>
-
-                                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                                        Date: {formatDate(e.date)}
-                                    </Typography>
-
-                                </CardContent>
-
-
-                            </Card>
-
-
-                        </>
-                    )
-                }) : <></>
-
-            }
+                                     {meetings.length !== 0 ? (
+    meetings.map((e, i) => (
+      <Card
+        key={i}
+        variant="outlined"
+        sx={{
+          background: "#D4D4D8",
+          width: "25vw",
+          textAlign: "center",
+          borderRadius: "10px",
+        }}
+      >
+        <CardContent>
+          <Typography sx={{ fontSize: 20 }} color="text.secondary" gutterBottom>
+            Code: {e.meetingCode}
+          </Typography>
+          <Typography color="text.secondary">
+            Date: {formatDate(e.date)}
+          </Typography>
+        </CardContent>
+      </Card>
+    ))
+  ) : (
+    <></>
+  )}
+</div>
 
         </div>
     )

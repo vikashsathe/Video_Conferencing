@@ -1,9 +1,11 @@
 @import "tailwindcss";
 
-
-/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap'); */
 body{
-        background: linear-gradient(145deg,#00053D 50%, #0955FF 95%) !important;
+        /* background: linear-gradient(145deg,#00053D 50%, #0955FF 95%) !important; */
+        /* background: linear-gradient(145deg, #00053D 0%, #002B7F 50%, #0955FF 100%) !important; */
+        /* background: linear-gradient(145deg, #00053D 0%, #0033A0 50%, #00A1FF 100%) !important; */
+        background: linear-gradient(125deg, #001144 0%, #0055FF 70%, #66CCFF 100%) !important;
+
           font-family: 'Poppins', sans-serif !important;
             font-family: 'Inter', sans-serif !important;
             color: #fff;
@@ -14,4 +16,6 @@ body{
           font-family: 'Poppins', sans-serif !important;
 }
 
-  
+::selection{
+  color: rgb(225, 255, 0);
+}
