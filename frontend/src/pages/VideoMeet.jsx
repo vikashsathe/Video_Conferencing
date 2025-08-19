@@ -430,8 +430,6 @@ export default function VideoMeetComponent() {
         console.log(socketRef.current);
         socketRef.current.emit('chat-message', message, username)
         setMessage("");
-
-        // this.setState({ message: "", sender: username })
     }
 
     
@@ -537,7 +535,7 @@ export default function VideoMeetComponent() {
                    
 
 
-                    <video className="absolute bottom-22 rounded-sm h-[20vh] w-auto left-5" ref={localVideoref} autoPlay muted></video>
+                    <video className="absolute bottom-22 flex rounded-sm h-[25vh] left-5 w-auto" ref={localVideoref} autoPlay muted></video>
 
                     <div className='flex gap-5 p-[20px]'>
                         {videos.map((video) => (
@@ -563,6 +561,9 @@ export default function VideoMeetComponent() {
 
             }
 
+          
+
         </div>
+        
     )
 }
